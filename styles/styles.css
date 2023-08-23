@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap");
+@import url("./styles/nav.css");
+@import url("./styles/main.css");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --purple-500: #8257e5;
+  --gray-300: #dfdfdf;
+  --white: #fff;
+}
+
+body {
+  font-family: "Manrope", sans-serif; 
+  margin: 0; /* Remova as margens para ocupar toda a tela */
+  background-color: #000;
+  background-image: radial-gradient(
+      at 2% 99%,
+      hsla(258, 89%, 71%, 0.3) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 98% 10%, hsla(258, 100%, 71%, 0.31) 0px, transparent 50%);
+  background-repeat: no-repeat;
+  background-size: auto 100%; /* Ajusta o tamanho horizontalmente e mantém a altura */
+  background-position: left bottom, right top; /* Posições dos gradientes */
+}
+
+/* ----------- Header --------------- */
+
+header{
+  display: flex;
+  justify-content: center;
+
+}
+
+/* ----------- Navbar --------------- */
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  height: 43.1px;
+  margin-top: 50px; /* margin ao topo */
+  margin-bottom: 40px; /* margin ao fundo */
+  display: flex;
+  justify-content: space-evenly; /* alinha horizontalmente os itens, deixando-os separados igualmente. (tambem com as laterais) */
+  align-items: center;
+  background-color: transparent;
+  color: var(--white);
+}
+
+.navbar__logo,
+.navbar__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__items-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* espaçamento entre os filhos -> so pode usar gap quando tiver flex */
+}
+
+.item-link {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: capitalize; /* transforma todo texto colocado dentro do item-link em capitalize -> a primeira letra será sempre maiuscula */
+}
+
+.item-link:hover,
+.takemycoffe-btn:hover {
+  color: var(--gray-300);
+}
+
+.takemycoffe-btn {
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--white);
+  border-radius: 6px; /* arredonda as bordas */
+  border: 1px solid var(--purple-500); /* tamanho da borda solida com a cor roxa */
+  padding: 0.6875rem 2.375rem; /* o espaçamento entre a "caixa" e os filhos  -> PRIMEIRA MEDIDA = EM CIMA E EMBAIXO ; SEGUNDA MEDIDA: LATERAIS */
+  text-transform: uppercase;
+}
+
+.logo_mobile {
+  display: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.abrir_menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    height: 95px;
+  }
+  .navbar__items-list {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .logo_mobile {
+    display: block;
+  }
+
+  .navbar__items-list {
+    flex-direction: column;
+  }
+
+  .navbar {
+    height: auto; /* Permitir que a altura se ajuste conforme o conteúdo */
+    flex-direction: column; /* Alinhar os itens verticalmente */
+    align-items: center; /* Centralizar na horizontal */
+  }
+
+  .linha {
+    margin-top: 20px; /* Adicionar margem entre a linha e os outros elementos */
+  }
+
+  .takemycoffe-btn {
+    margin-top: 20px; /* Adicionar margem acima do botão */
+  }
+
+  .abrir_menu {
+    display: block;
+    width: 24px;
+    height: 8px;
+    cursor: pointer;
+  }
+  .navbar__logo {
+    width: 85%;
+    justify-content: space-between;
+  }
+}
+
+/* ----------- modal --------------- */
+
+.modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: -100%; /* Começa fora da tela à direita */
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  transition: right 0.3s ease;
+}
+
+.modal-content {
+  background-color: #000;
+  width: 100%;
+  margin: 10% auto;
+  box-shadow: 0 4px 8px #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+}
+
+.logo_menu {
+  width: 171px;
+  height: 32.8px;
+}
+
+.alinhar_logoModal {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.btn_modal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linkBtn {
+  width: 100%;
+  text-decoration: none;
+}
+
+.buttons {
+  display: flex;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 17px;
+  width: 100%;
+  height: 57px;
+  background-color: #000;
+  color: #a8a8b3;
+  font-family: "Manrope";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-left: none;
+  border-right: none;
+  border-top: 1px #a8a8b3 solid;
+  border-bottom: 1px #a8a8b3 solid;
+  margin-top: -1px;
+  cursor: pointer;
+}
+
+.buttons:hover {
+  border-left: 5px var(--purple-500) solid;
+  color: #fff;
+}
+
+/* ----------- main --------------- */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  /* h1 mais próximo de dentro do main */
+  font-weight: 700; /* grossura da fonte */
+  font-size: 80px;
+  line-height: normal; /* quanto ocupa em altura por linha*/
+  color: var(--white);
+  text-transform: capitalize; /* todo conteudo será transformado em UPPERCASE */
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 80px;
+  text-shadow: /* sombra do texto */ 1px 1px 0 var(--purple-500),
+    /* sombra na parte de cima */ -1px -1px 0 var(--purple-500),
+    /* sombra na direita */ 1px -1px 0 var(--purple-500),
+    /* sombra embaixo */ -1px 1px 0 var(--purple-500); /* sombra na esquerda */
+  text-transform: capitalize;
+}
+
+.alinhar_img{
+  width: 80%;
+  max-width: 800px;
+}
+
+.coffe {
+  width: 100%;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Estilos para telas menores que 768px */
+
+  .linha {
+    width: 100%;
+    height: 1px;
+    background-color: #29292e;
+  }
+
+  .mobile {
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    margin-top: 88.5px;
+    margin-bottom: 88px;
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+
+  .coffe {
+    width: 100%; /* Certifique-se de ajustar a largura proporcionalmente */
+  }
+
+  h1,
+  h1 {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 605px) {
+  h1,
+  h2 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1,
+  h2 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1,
+  h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 320px) {
+  h1,
+  h2 {
+    font-size: 30px;
+  }
+}

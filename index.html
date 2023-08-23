@@ -1,0 +1,108 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Desafio</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <img
+            id="logo"
+            class="logo"
+            src="./images/logo.png"
+            alt="Rocketseat Logo"
+          />
+          <img
+            class="logo_mobile"
+            src="./images/logo-mobile.png"
+            alt="Rocketseat Logo"
+          />
+          <div class="alinha_menu">
+            <img
+              src="./images/menu.png"
+              class="abrir_menu"
+              id="openModalBtn"
+              alt="icone menu"
+            />
+          </div>
+        </div>
+        <div>
+          <ul class="navbar__items-list">
+            <li class="item-list">
+              <a href="index.html" class="item-link">Home</a>
+            </li>
+
+            <li class="item-list">
+              <a href="#menu" class="item-link">Menu</a>
+            </li>
+
+            <li class="item-list">
+              <a href="#recompensas" class="item-link">Recompensas</a>
+            </li>
+
+            <li class="item-list">
+              <a href="#git-cards" class="item-link">Gift Cards</a>
+            </li>
+
+            <li class="item-list">
+              <a href="#lojas" class="item-link">Lojas</a>
+            </li>
+          </ul>
+        </div>
+        <div class="linha"></div>
+        <div class="mobile">
+          <p>O café que fará seu código decolar para o próximo nível.</p>
+        </div>
+        <div class="navbar__takemycoffe">
+          <button class="takemycoffe-btn">Pegar meu café</button>
+        </div>
+      </nav>
+    </header>
+    <br />
+    <main>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <div class="alinhar_logoModal">
+            <img
+              class="logo_menu"
+              src="./images/logo-mobile.png"
+              alt="Rocketseat Logo"
+            />
+            <img
+              src="./images/Close.png"
+              class="close"
+              id="closeModalBtn"
+              alt="fechar menu"
+            />
+          </div>
+          <div class="btn_modal">
+            <a class="linkBtn" href="index.html">
+              <button class="buttons">Home</button>
+            </a>
+            <a class="linkBtn" href="#Menu">
+              <button class="buttons">Menu</button>
+            </a>
+            <a class="linkBtn" href="#Recompensas">
+              <button class="buttons">Recompensas</button>
+            </a>
+            <a class="linkBtn" href="#GiftCards">
+              <button class="buttons">Gift Cards</button>
+            </a>
+            <a class="linkBtn" href="#Lojas">
+              <button class="buttons">Lojas</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <h1>Great Coffe</h1>
+      <h2>&lt;Great Code/&gt;</h2>
+      <div class="alinhar_img">
+        <img class="coffe" src="images/image-coffe.png" alt="Coffe image" />
+      </div>
+    </main>
+  </body>
+  <script src="./js/modal.js"></script>
+</html>
