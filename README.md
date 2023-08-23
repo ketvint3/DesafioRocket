@@ -39,7 +39,7 @@ O ponto de partida é um desafio proposto pela  <a href = "https://efficient-slo
 * Reproduzir um layout no Figma incentiva soluções criativas para desafios de design e estilo.
 
 
- ###  Para mais fácil visualizaçao do projeto clique <a href="http://127.0.0.1:5500/index.html/#"> Aqui </a>.
+ ###  Para mais fácil visualizaçao do projeto clique <a href="http://127.0.0.1:5500/index.html"> Aqui </a>.
 
 
 
